@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "FilsonProBlack";
+  src: url("/fonts/FilsonProBlack.otf");
+}
+
+.font-brand-heading {
+  font-family: "FilsonProBlack";
+}
+
+* {
+  @apply transition;
+}
+
+body {
+  @apply bg-gray-950 scroll-smooth;
+}
+
+.animate-scroll {
+  width: 2500px;
+  animation: animateScroll 35s linear infinite;
+}
+
+@keyframes animateScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-float {
+  animation: float 3s infinite;
+}
+.delay-50 {
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(-25px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+}
